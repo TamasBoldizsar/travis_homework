@@ -8,34 +8,17 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
           packages:
-            - g++-4.9
-          env: COMPILER=g++-4.9
+            - g++-7
+          env: COMPILER=g++-7
     - os: linux
       addons:
         apt:
           sources:
             - ubuntu-toolchain-r-test
+            - llvm-toolchain-precise-6.0
           packages:
-            - g++-6
-          env: COMPILER=g++-6
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-3.6
-          packages:
-            - clang-3.6
-          env: COMPILER=clang++-3.6
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-3.7
-          packages:
-            - clang-3.7
-          env: COMPILER=clang++-3.7
+            - clang-6.0
+          env: COMPILER=clang++-6.0
 
 notification:
   email: false
@@ -49,7 +32,7 @@ install:
 script:
 - cppcheck --quiet --error-exitcode=1 .
 - mkdir build && cd build
-- cmake -DCMAKE_CXX_COMPILER=$COMPILER -DCMAKE_BUILD_TYPE=Coverage .. && make -j2
+- cmake -DCMAKE_CXX_COMPILER=$COMPILER -DCMAKE_BUILD_TYPE=Coverage .. && make
 - cd src
 - ./travis_homework
 - cd ../test

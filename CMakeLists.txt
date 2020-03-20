@@ -13,5 +13,5 @@ add_subdirectory(src)
 add_subdirectory(test)
 
 if(UNIX)
-    include(CodeCoverage)
+	include(CodeCoverage)
 endif()

@@ -2,23 +2,23 @@ language: c++
 
 matrix:
   include:
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-7
-          env: COMPILER=g++-7
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-6.0
-          packages:
-            - clang-6.0
-          env: COMPILER=clang++-6.0
+	- os: linux
+	  addons:
+		apt:
+		  sources:
+			- ubuntu-toolchain-r-test
+		  packages:
+			- g++-7
+		  env: COMPILER=g++-7
+	- os: linux
+	  addons:
+		apt:
+		  sources:
+			- ubuntu-toolchain-r-test
+			- llvm-toolchain-precise-6.0
+		  packages:
+			- clang-6.0
+		  env: COMPILER=clang++-6.0
 
 notification:
   email: false

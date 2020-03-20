@@ -26,6 +26,33 @@ TEST(SumTest, testSumFunction4)
 	EXPECT_EQ(-2, num);
 }
 
+TEST(MultiplyTest, testMultiplyFunction1)
+{
+	int num = example::multiply(0, 3);
+	EXPECT_EQ(0, num);
+}
+
+
+TEST(MultiplyTest, testMultiplyFunction2)
+{
+	int num = example::multiply(2, 10);
+	EXPECT_EQ(20, num);
+}
+
+
+TEST(MultiplyTest, testMultiplyFunction3)
+{
+	int num = example::multiply(-4, 4);
+	EXPECT_EQ(-16, num);
+}
+
+
+TEST(MultiplyTest, testMultiplyFunction4)
+{
+	int num = example::multiply(-1, -1);
+	EXPECT_EQ(1, num);
+}
+
 int main(int argc, char** argv) {
   ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

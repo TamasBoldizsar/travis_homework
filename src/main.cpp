@@ -2,7 +2,7 @@
 
 int main()
 {
-	qDebug() << "App started...";
+	qDebug() << "Travis app started...";
 
 	return 0;
 }

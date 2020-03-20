@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+
+  travis_homework:
+    build: .
+    image: travis-homework
+    volumes:
+      - ../:/source
+    stdin_open: true
+    tty: true

@@ -32,20 +32,17 @@ TEST(MultiplyTest, testMultiplyFunction1)
 	EXPECT_EQ(0, num);
 }
 
-
 TEST(MultiplyTest, testMultiplyFunction2)
 {
 	int num = example::multiply(2, 10);
 	EXPECT_EQ(20, num);
 }
 
-
 TEST(MultiplyTest, testMultiplyFunction3)
 {
 	int num = example::multiply(-4, 4);
 	EXPECT_EQ(-16, num);
 }
-
 
 TEST(MultiplyTest, testMultiplyFunction4)
 {
